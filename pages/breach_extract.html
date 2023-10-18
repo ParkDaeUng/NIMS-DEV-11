@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마약류오남용실시간분석관리시스템 - 위배처방 추출 내역</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+<body>
+  <!-- nav start -->
+  <nav>
+    <a href="./main.html">
+      <h1>마약류 오남용 실시간 분석·관리</h1>
+    </a>
+    <div class="user-info">
+      <div>
+        <img src="../images/profile.svg"/>
+        <p>박기춘님</p>
+      </div>
+      <div>
+        <img src="../images/arrow_down.svg" class="profile-arrow"/>
+      </div>
+    </div>
+    <ol class="user-sub-menu">
+      <li>회원정보 수정</li>
+      <li>접속내역 확인</li>
+      <li>로그아웃</li>
+    </ol>
+    <div class="menu-wrapper">
+      <div class="menu-btn"><img src="../images/nav_1.svg"/>기준관리</div>
+      <ol class="sub-menu">
+        <li>오남용조치기준 등록</li>
+        <li>오남용조치기준 사용이력조회</li>
+        <li>사전알리미 스케쥴 설정</li>
+        <li>의사정보 관리</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_2.svg"/>사전알리미 등록/추출</div>
+      <ol class="sub-menu">
+        <li>사전알리미 등록</li>
+        <li>사전알리미 추출이력</li>
+        <li>위배처방 추출내역</li>
+        <li>위배처방 상세내역</li>
+        <li>위배처방 알림제외</li>
+        <li>위배처방 통계</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_3.svg"/>사전알리미 발송관리</div>
+      <ol class="sub-menu">
+        <li>발송대상 선정</li>
+        <li>사전알리미 발송</li>
+        <li>발송이력 조회</li>
+        <li>발송이력 상세 조회</li>
+        <li>차수연결</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_4.svg"/>소명관리</div>
+      <ol class="sub-menu">
+        <li>소명자료 등록 및 승인</li>
+        <li>소명 기본통계 조회</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_6.svg"/>심의관리</div>
+      <ol class="sub-menu">
+        <li>심의관리 하위메뉴1</li>
+        <li>심의관리 하위메뉴2</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_7.svg"/>행정처분관리</div>
+      <ol class="sub-menu">
+        <li>행정처분관리 하위메뉴1</li>
+        <li>행정처분관리 하위메뉴2</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_5.svg"/>통계 및 현황 조회</div>
+      <ol class="sub-menu">
+        <li>위배처방 감소현황</li>
+        <li>위배처방자 감소현황</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/setting.svg"/>관리자</div>
+      <ol class="sub-menu">
+        <li>정의중</li>
+        <li>환자보호필요도</li>
+        <li>데이터 적재 관리</li>
+        <li>공통코드 관리</li>
+        <li>사용자관리</li>
+      </ol>
+    </div>
+    <div class="btn-wrapper">
+      <button type="button" class="slide-btn"><img src="../images/nav_slide_zoomin.svg" id="slide_img"/>메뉴축소</button>
+      <a href="./main.html"><img src="../images/logo_title.png" id="logo_img"/></a>
+    </div>
+  </nav>
+  <!-- main start -->
+  <main>
+    <div class="main-wrapper">
+      <div class="breach-contents">
+        <div class="title">
+          <h1>위배처방 추출 내역</h1>
+          <div class="breadcrumb">
+            <ol>
+              <li><a href="./main.html"><img src="../images/home.svg"/></a></li>
+              <li><a href="./main.html">사전알리미 등록/추출</a></li>
+              <li><a href="./breach_extract.html">위배처방 추출 내역</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="option-group">
+          <div class="option-line">
+            <div>
+              <p>구분</p>
+              <div class="select-box size-220">
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">그룹</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">그룹</li>
+                    <li class="option-item">분류1</li>
+                    <li class="option-item">분류2</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p>사전 알리미</p>
+              <div class="select-box size-220">
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">사전 알리미</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">사전 알리미</li>
+                    <li class="option-item">분류1</li>
+                    <li class="option-item">분류2</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p>오남용조치기준</p>
+              <div class="select-box size-220">
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">오남용조치기준</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">오남용조치기준</li>
+                    <li class="option-item">분류1</li>
+                    <li class="option-item">분류2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn btn-s btn-blue">조회</button>
+          <button type="button" class="btn btn-s btn-sky">초기화</button>
+        </div>
+        <div class="data-wrap">
+          <div>
+            <div><img src="../images/breach_icon_1.svg"/><p>전체 처방의사수 <span>3,212</span>명</p></div>
+            <div><img src="../images/breach_icon_2.svg"/><p>위배처방의사수 <span>435</span>명</p></div>
+            <div><img src="../images/breach_icon_3.svg"/><p>비율 <span>11</span>%</p></div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>사전알리미</th>
+              <th>약물</th>
+              <th>효능</th>
+              <th>성분</th>
+              <th>유형</th>
+              <th>의사명</th>
+              <th>위배건수</th>
+              <th>위배종수</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td class="td-red-under">성분상세</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td class="td-red-under">성분상세</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td>-</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td class="td-red-under">성분상세</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td>-</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td class="td-red-under">성분상세</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td class="td-red-under">성분상세</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td>-</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td>-</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>진통제</td>
+              <td>-</td>
+              <td>-</td>
+              <td>홍길동</td>
+              <td>3</td>
+              <td>2</td>
+            </tr>
+          </table>
+          <div class='pagination'>
+            <button class='prev-btn'><img src="../images/prev_icon.svg"/></button>
+            <button class='page selected'>1</button>
+            <button class='page'>2</button>
+            <button class='page'>3</button>
+            <button class='next-btn'><img src="../images/next_icon.svg"/></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © Korea Institute of Drug Safety & Risk Management. All Rights Reserved.</p>
+    </div>
+  </main>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

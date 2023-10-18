@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마약류오남용실시간분석관리시스템 - 사전알리미 상세정보/수정</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+<body>
+  <div class="exception-popup">
+    <header>
+      <h1>발송대상 제외</h1>
+      <button><img src="../images/close_icon.svg"/></button>
+    </header>
+    <div class="wrapper">
+      <table>
+        <tr>
+          <th>사전알리미명</th>
+          <th>약물</th>
+          <th>년도</th>
+          <th>차수</th>
+          <th>위배처방기준</th>
+        </tr>
+        <tr>
+          <td>사전알리미1</td>
+          <td>진통제</td>
+          <td>2023</td>
+          <td>1</td>
+          <td>위배기준1</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>추출일자</th>
+          <th>보고일자</th>
+          <th>처방전번호</th>
+          <th>처방의사명</th>
+          <th>환자</th>
+          <th>유형</th>
+        </tr>
+        <tr>
+          <td>2023.08.08</td>
+          <td>2023.04.04</td>
+          <td>235822</td>
+          <td>홍길동</td>
+          <td>임꺽정</td>
+          <td>연령제한위반</td>
+        </tr>
+      </table>
+
+      <div class="input-wrapper">
+        <div class="contents">
+          <p>발송대상 제외 사유</p>
+          <textarea rows="5" placeholder="사유를 입력하세요."></textarea>
+        </div>
+        <div class="contents">
+          <p>제외자</p>
+          <span>홍길동</span>
+        </div>
+      </div>
+
+      <div class="save-btn-wrapper">
+        <button type="button" class="btn btn-m btn-whith">닫기</button>
+        <button type="button" class="btn btn-m btn-blue">저장</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/main.js"></script>
+  <!-- datepicker -->
+  <script type="text/javascript" src="../lib/timepicker.js"></script>
+  <script type="text/javascript" src="../lib/moment.min.js"></script>
+  <script type="text/javascript" src="../lib/datepicker.js"></script>
+  <script type="text/javascript" src="../lib/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/datepicker.css" />
+</body>
+</html>

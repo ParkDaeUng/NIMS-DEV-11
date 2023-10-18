@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마약류오남용실시간분석관리시스템 - 전문가협의체 개최 및 소명판정</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+<body>
+  <!-- nav start -->
+  <nav>
+    <a href="./main.html">
+      <h1>마약류 오남용 실시간 분석·관리</h1>
+    </a>
+    <div class="user-info">
+      <div>
+        <img src="../images/profile.svg"/>
+        <p>박기춘님</p>
+      </div>
+      <div>
+        <img src="../images/arrow_down.svg" class="profile-arrow"/>
+      </div>
+    </div>
+    <ol class="user-sub-menu">
+      <li>회원정보 수정</li>
+      <li>접속내역 확인</li>
+      <li>로그아웃</li>
+    </ol>
+    <div class="menu-wrapper">
+      <div class="menu-btn"><img src="../images/nav_1.svg"/>기준관리</div>
+      <ol class="sub-menu">
+        <li>오남용조치기준 등록</li>
+        <li>오남용조치기준 사용이력조회</li>
+        <li>사전알리미 스케쥴 설정</li>
+        <li>의사정보 관리</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_2.svg"/>사전알리미 등록/추출</div>
+      <ol class="sub-menu">
+        <li>사전알리미 등록</li>
+        <li>사전알리미 추출이력</li>
+        <li>위배처방 추출내역</li>
+        <li>위배처방 상세내역</li>
+        <li>위배처방 알림제외</li>
+        <li>위배처방 통계</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_3.svg"/>사전알리미 발송관리</div>
+      <ol class="sub-menu">
+        <li>발송대상 선정</li>
+        <li>사전알리미 발송</li>
+        <li>발송이력 조회</li>
+        <li>발송이력 상세 조회</li>
+        <li>차수연결</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_4.svg"/>소명관리</div>
+      <ol class="sub-menu">
+        <li>소명자료 등록 및 승인</li>
+        <li>소명 기본통계 조회</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_6.svg"/>심의관리</div>
+      <ol class="sub-menu">
+        <li>심의관리 하위메뉴1</li>
+        <li>심의관리 하위메뉴2</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_7.svg"/>행정처분관리</div>
+      <ol class="sub-menu">
+        <li>행정처분관리 하위메뉴1</li>
+        <li>행정처분관리 하위메뉴2</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_5.svg"/>통계 및 현황 조회</div>
+      <ol class="sub-menu">
+        <li>위배처방 감소현황</li>
+        <li>위배처방자 감소현황</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/setting.svg"/>관리자</div>
+      <ol class="sub-menu">
+        <li>정의중</li>
+        <li>환자보호필요도</li>
+        <li>데이터 적재 관리</li>
+        <li>공통코드 관리</li>
+        <li>사용자관리</li>
+      </ol>
+    </div>
+    <div class="btn-wrapper">
+      <button type="button" class="slide-btn"><img src="../images/nav_slide_zoomin.svg" id="slide_img"/>메뉴축소</button>
+      <a href="./main.html"><img src="../images/logo_title.png" id="logo_img"/></a>
+    </div>
+  </nav>
+  <!-- main start -->
+  <main>
+    <div class="main-wrapper">
+      <div class="consider-contents">
+        <div class="title">
+          <h1>심의워원회 결과반영</h1>
+          <div class="breadcrumb">
+            <ol>
+              <li><a href="./main.html"><img src="../images/home.svg"/></a></li>
+              <li><a href="./main.html">심의관리</a></li>
+              <li><a href="./consider_manage.html">심의워원회 결과반영</a></li>
+            </ol>
+          </div>
+        </div>
+        <h1 class="sub-title">사전알리미별 의사별 위배처방건수 조회</h1>
+        <div class="option-group">
+          <div class="option-line">
+            <div>
+              <p>약물</p>
+              <div class="select-box size-220">
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">약물</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">약물</li>
+                    <li class="option-item">분류1</li>
+                    <li class="option-item">분류2</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p>사전 알리미</p>
+              <div class="select-box size-220">
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">사전 알리미</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">사전 알리미</li>
+                    <li class="option-item">분류1</li>
+                    <li class="option-item">분류2</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p>개최일</p>
+              <div class="datepicker datepicker-multi">
+                <div>
+                  <div class="date start-date">2023-02-28</div>
+                  <span>~</span>
+                  <div class="date end-date">2023-02-28</div>
+                  <input type="hidden" name="" id="" value="">
+                </div>
+                <img src="../images/cal.svg"/>
+              </div>
+            </div>
+            <div>
+              <p>개최명칭</p>
+              <input type="text" placeholder="개최명칭">
+            </div>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn btn-s btn-blue">조회</button>
+          <button type="button" class="btn btn-s btn-sky">초기화</button>
+        </div>
+        <div class="data-wrap">
+          <div>
+          </div>
+          <div>
+            <button type="button" class="btn btn-excel"><img src="../images/excel_icon.svg"/>업로드</button>
+            <button type="button" class="btn btn-excel"><img src="../images/excel_icon.svg"/>다운로드</button>
+            <button type="button" class="btn btn-excel">신규</button>
+          </div>
+        </div>
+        <div class="wrapper">
+          <table>
+            <tr>
+              <th>선택</th>
+              <th>번호</th>
+              <th>사전알리미</th>
+              <th>약물</th>
+              <th>연도</th>
+              <th>차수</th>
+              <th>순위</th>
+              <th>의사</th>
+              <th>위배처방건수</th>
+              <th>발송대상여부</th>
+              <th>발송제외사유</th>
+              <th>발송제외일자</th>
+              <th>발송제외자</th>
+            </tr>
+            <tr>
+              <td>
+                <div class="check-wrap">
+                  <input type="checkbox" id="check-1">
+                  <label for="check-1"></label>
+                </div>
+              </td>
+              <td>1</td>
+              <td>사전알리미1</td>
+              <td>졸피뎀</td>
+              <td>2023</td>
+              <td>1</td>
+              <td>1</td>
+              <td>홍길동</td>
+              <td>30</td>
+              <td>발송</td>
+              <td>심의위원회</td>
+              <td>2023.08.09</td>
+              <td>임꺽정</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="check-wrap">
+                  <input type="checkbox" id="check-2">
+                  <label for="check-2"></label>
+                </div>
+              </td>
+              <td>2</td>
+              <td>사전알리미1</td>
+              <td>졸피뎀</td>
+              <td>2023</td>
+              <td>1</td>
+              <td>1</td>
+              <td>홍길동</td>
+              <td>30</td>
+              <td>발송</td>
+              <td>심의위원회</td>
+              <td>2023.08.09</td>
+              <td>임꺽정</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="check-wrap">
+                  <input type="checkbox" id="check-3">
+                  <label for="check-3"></label>
+                </div>
+              </td>
+              <td>3</td>
+              <td>사전알리미1</td>
+              <td>졸피뎀</td>
+              <td>2023</td>
+              <td>1</td>
+              <td>1</td>
+              <td>홍길동</td>
+              <td>30</td>
+              <td>발송</td>
+              <td>심의위원회</td>
+              <td>2023.08.09</td>
+              <td>임꺽정</td>
+            </tr>
+          </table>
+          <div class='pagination'>
+            <button class='prev-btn'><img src="../images/prev_icon.svg"/></button>
+            <button class='page selected'>1</button>
+            <button class='page'>2</button>
+            <button class='page'>3</button>
+            <button class='next-btn'><img src="../images/next_icon.svg"/></button>
+          </div>
+        </div>
+        <h1 class="sub-title">의사별 세부 위배처방 내역</h1>
+        <div class="wrapper">
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>사전알리미</th>
+              <th>약물</th>
+              <th>년도</th>
+              <th>차수</th>
+              <th>추출일자</th>
+              <th>위배사유</th>
+              <th>의사</th>
+              <th>환자</th>
+              <th>취급일자</th>
+              <th>보고일자</th>
+              <th>처방전번호</th>
+              <th>심의위원회1</th>
+              <th>심의위원회2</th>
+              <th>발송대상여부</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>2023</td>
+              <td>1</td>
+              <td>2023.08.11</td>
+              <td>연령제한위반</td>
+              <td>홍길동</td>
+              <td>임꺽정</td>
+              <td>2023.08.11</td>
+              <td>2023.08.11</td>
+              <td>11213123</td>
+              <td>대상</td>
+              <td>제외</td>
+              <td>발송대상</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>2023</td>
+              <td>1</td>
+              <td>2023.08.11</td>
+              <td>연령제한위반</td>
+              <td>홍길동</td>
+              <td>임꺽정</td>
+              <td>2023.08.11</td>
+              <td>2023.08.11</td>
+              <td>11213123</td>
+              <td>대상</td>
+              <td>제외</td>
+              <td>발송대상</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>사전알리미1</td>
+              <td>진통제</td>
+              <td>2023</td>
+              <td>1</td>
+              <td>2023.08.11</td>
+              <td>연령제한위반</td>
+              <td>홍길동</td>
+              <td>임꺽정</td>
+              <td>2023.08.11</td>
+              <td>2023.08.11</td>
+              <td>11213123</td>
+              <td>대상</td>
+              <td>제외</td>
+              <td>발송대상</td>
+            </tr>
+          </table>
+          <div class='pagination'>
+            <button class='prev-btn'><img src="../images/prev_icon.svg"/></button>
+            <button class='page selected'>1</button>
+            <button class='page'>2</button>
+            <button class='page'>3</button>
+            <button class='next-btn'><img src="../images/next_icon.svg"/></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © Korea Institute of Drug Safety & Risk Management. All Rights Reserved.</p>
+    </div>
+  </main>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/main.js"></script>
+  <!-- datepicker -->
+  <script type="text/javascript" src="../lib/timepicker.js"></script>
+  <script type="text/javascript" src="../lib/moment.min.js"></script>
+  <script type="text/javascript" src="../lib/datepicker.js"></script>
+  <script type="text/javascript" src="../lib/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/datepicker.css" />
+</body>
+</html>

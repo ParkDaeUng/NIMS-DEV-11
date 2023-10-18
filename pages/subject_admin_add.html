@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마약류오남용실시간분석관리시스템 - 행정처분 대상자 등록</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+<body>
+  <div class="subject-admin-popup">
+    <header>
+      <h1>행정처분 대상자 등록</h1>
+      <button><img src="../images/close_icon.svg"/></button>
+    </header>
+    <div class="wrapper">
+      <div class="select-group">
+        <div class="select-wrap">
+          <div class="contents">
+            <p>의사명</p>
+            <input type="text" placeholder="의사명" class="text-area">
+          </div>
+          <div class="contents">
+            <p>처분시작일자</p>
+            <div class="datepicker datepicker-single">
+              <div>
+                <div class="date start-date">2023-02-28</div>
+                <input type="hidden" name="" id="" value="">
+              </div>
+              <img src="../images/cal.svg"/>
+            </div>
+          </div>
+        </div>
+        <div class="select-wrap">
+          <div class="contents">
+            <p>면허번호</p>
+            <input type="text" placeholder="면허번호" class="text-area">
+          </div>
+          <div class="contents">
+            <p>처분종료일자</p>
+            <div class="datepicker datepicker-single">
+              <div>
+                <div class="date start-date">2023-02-28</div>
+                <input type="hidden" name="" id="" value="">
+              </div>
+              <img src="../images/cal.svg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="select-group">
+        <div class="select-wrap full">
+          <div class="contents">
+            <p>근거</p>
+            <textarea rows="5" placeholder="근거를 입력하세요."></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="select-group">
+        <div class="select-wrap">
+          <div class="contents">
+            <p>등록일</p>
+            <div class="datepicker datepicker-single">
+              <div>
+                <div class="date start-date">2023-02-28</div>
+                <input type="hidden" name="" id="" value="">
+              </div>
+              <img src="../images/cal.svg"/>
+            </div>
+          </div>
+        </div>
+        <div class="select-wrap">
+          <div class="contents">
+            <p>등록자</p>
+            <input type="text" placeholder="등록자" class="text-area">
+          </div>
+        </div>
+      </div>
+      <div class="save-btn-wrapper">
+        <button type="button" class="btn btn-m btn-whith">닫기</button>
+        <button type="button" class="btn btn-m btn-blue">저장</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/main.js"></script>
+  <!-- datepicker -->
+  <script type="text/javascript" src="../lib/timepicker.js"></script>
+  <script type="text/javascript" src="../lib/moment.min.js"></script>
+  <script type="text/javascript" src="../lib/datepicker.js"></script>
+  <script type="text/javascript" src="../lib/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/datepicker.css" />
+</body>
+</html>

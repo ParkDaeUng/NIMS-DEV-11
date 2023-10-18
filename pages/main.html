@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마약류오남용실시간분석관리시스템 - main</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>
+</head>
+</head>
+<body>
+  <!-- nav start -->
+  <nav>
+    <a href="./main.html">
+      <h1>마약류 오남용 실시간 분석·관리</h1>
+    </a>
+    <div class="user-info">
+      <div>
+        <img src="../images/profile.svg"/>
+        <p>박기춘님</p>
+      </div>
+      <div>
+        <img src="../images/arrow_down.svg" class="profile-arrow"/>
+      </div>
+    </div>
+    <ol class="user-sub-menu">
+      <li>회원정보 수정</li>
+      <li>접속내역 확인</li>
+      <li>로그아웃</li>
+    </ol>
+    <div class="menu-wrapper">
+      <div class="menu-btn"><img src="../images/nav_1.svg"/>기준관리</div>
+      <ol class="sub-menu">
+        <li>오남용조치기준 등록</li>
+        <li>오남용조치기준 사용이력조회</li>
+        <li>사전알리미 스케쥴 설정</li>
+        <li>의사정보 관리</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_2.svg"/>사전알리미 등록/추출</div>
+      <ol class="sub-menu">
+        <li>사전알리미 등록</li>
+        <li>사전알리미 추출이력</li>
+        <li>위배처방 추출내역</li>
+        <li>위배처방 상세내역</li>
+        <li>위배처방 알림제외</li>
+        <li>위배처방 통계</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_3.svg"/>사전알리미 발송관리</div>
+      <ol class="sub-menu">
+        <li>발송대상 선정</li>
+        <li>사전알리미 발송</li>
+        <li>발송이력 조회</li>
+        <li>발송이력 상세 조회</li>
+        <li>차수연결</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_4.svg"/>소명관리</div>
+      <ol class="sub-menu">
+        <li>소명자료 등록 및 승인</li>
+        <li>소명 기본통계 조회</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_6.svg"/>심의관리</div>
+      <ol class="sub-menu">
+        <li>심의관리 하위메뉴1</li>
+        <li>심의관리 하위메뉴2</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_7.svg"/>행정처분관리</div>
+      <ol class="sub-menu">
+        <li>행정처분관리 하위메뉴1</li>
+        <li>행정처분관리 하위메뉴2</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/nav_5.svg"/>통계 및 현황 조회</div>
+      <ol class="sub-menu">
+        <li>위배처방 감소현황</li>
+        <li>위배처방자 감소현황</li>
+      </ol>
+      <div class="menu-btn"><img src="../images/setting.svg"/>관리자</div>
+      <ol class="sub-menu">
+        <li>정의중</li>
+        <li>환자보호필요도</li>
+        <li>데이터 적재 관리</li>
+        <li>공통코드 관리</li>
+        <li>사용자관리</li>
+      </ol>
+    </div>
+    <div class="btn-wrapper">
+      <button type="button" class="slide-btn"><img src="../images/nav_slide_zoomin.svg" id="slide_img"/>메뉴축소</button>
+      <a href="./main.html"><img src="../images/logo_title.png" id="logo_img"/></a>
+    </div>
+  </nav>
+  <!-- main start -->
+  <main>
+    <div class="main-wrapper">
+      <div class="main-contents">
+        <div class="wrapper">
+          <div class="title">
+            <h1>약물별 위배처방 현황</h1>
+            <div class="option-box">
+              <!-- select-box -->
+              <div class="select-box size-s">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">전체</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">전체</li>
+                    <li class="option-item">분류1</li>
+                    <li class="option-item">분류2</li>
+                </ul>                                
+              </div>
+              <div class="select-box size-s">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">일</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">일</li>
+                    <li class="option-item">분류1</li>
+                    <li class="option-item">분류2</li>
+                </ul>                                
+              </div>
+              <!-- // select-box -->
+            </div>
+          </div>
+          <div class="contents">
+            <div class="chart-wrapper">
+              <div id="chart1" class="chart"></div>
+            </div>
+            <div class="chart-wrapper">
+              <div id="chart2" class="chart"></div>
+            </div>
+            <div class="chart-wrapper">
+              <div id="chart3" class="chart"></div>
+            </div>
+            <div class="chart-wrapper">
+              <div id="chart4" class="chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="title">
+            <h1>정기 업무 진행 현황</h1>
+            <div class="option-box">
+              <!-- select-box -->
+              <div class="select-box size-s">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">전체</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">전체</li>
+                    <li class="option-item">분류1</li>
+                    <li class="option-item">분류2</li>
+                </ul>                                
+              </div>
+              <!-- // select-box -->
+              <!-- select-box -->
+              <div class="select-box size-m">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">차수 선택</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">차수1</li>
+                    <li class="option-item">차수2</li>
+                    <li class="option-item">차수3</li>
+                    <li class="option-item">차수4</li>
+                </ul>                                
+              </div>
+              <!-- // select-box -->
+              <button type="button" class="btn btn-s btn-blue">조회</button>
+            </div>
+          </div>
+          <div class="contents">
+            <div class="progress">
+              <div class="container">
+                <div>
+                  <h1>처방분석</h1>
+                </div>
+                <p>22.07.07 ~ 22.12.31</p>
+              </div>
+              <div class="container">
+                <div>
+                  <h1>정보제공</h1>
+                  <span>23.04년</span>
+                </div>
+                <p>3,143<span>명</span></p>
+              </div>
+              <div class="container">
+                <div>
+                  <h1>추적관찰</h1>
+                  <span>23.05.01 ~ 23.07.31</span>
+                </div>
+                <p>3,123 / 5,432<span>건</span></p>
+              </div>
+              <div class="container">
+                <div>
+                  <h1>사전통지</h1>
+                  <span>승인/미승인</span>
+                </div>
+                <p>2,222 / 901<span>건</span></p>
+              </div>
+              <div class="container">
+                <div>
+                  <h1>행정조치</h1>
+                </div>
+                <p>211<span>명</span></p>
+              </div>
+              <div class="container">
+                <div>
+                  <h1>조치이행확인</h1>
+                </div>
+                <p>22.07.07 ~ 22.12.31</p>
+              </div>
+              <div class="container">
+                <div>
+                  <h1>후속조치</h1>
+                </div>
+                <p>211<span>명</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="title">
+            <h1>데이터 전송 / 적재 현황</h1>
+          </div>
+          <div class="contents">
+            <table>
+              <tr>
+                <th>번호</th>
+                <th>수행일</th>
+                <th>작업명</th>
+                <th>송신</th>
+                <th>수신</th>
+                <th>시작시간</th>
+                <th>종료시간</th>
+                <th>전송건수</th>
+                <th>결과</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2023.07.07</td>
+                <td>취급보고 헤더</td>
+                <td>NIMS</td>
+                <td>시전알리미</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2023.07.07</td>
+                <td>취급보고 상세</td>
+                <td>NIMS</td>
+                <td>시전알리미</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2023.07.07</td>
+                <td>일마감 헤더</td>
+                <td>NIMS</td>
+                <td>시전알리미</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>2023.07.07</td>
+                <td>일마감 상세</td>
+                <td>NIMS</td>
+                <td>시전알리미</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>2023.07.07</td>
+                <td>위배처방</td>
+                <td>시전알리미</td>
+                <td>DATA</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>2023.07.07</td>
+                <td>취급보고 헤더</td>
+                <td>NIMS</td>
+                <td>시전알리미</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>2023.07.07</td>
+                <td>일마감 헤더</td>
+                <td>NIMS</td>
+                <td>시전알리미</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>2023.07.07</td>
+                <td>취급보고 헤더</td>
+                <td>NIMS</td>
+                <td>시전알리미</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>2023.07.07</td>
+                <td>위배처방</td>
+                <td>시전알리미</td>
+                <td>DATA</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>2023.07.07</td>
+                <td>취급보고 헤더</td>
+                <td>NIMS</td>
+                <td>시전알리미</td>
+                <td>05:00:32</td>
+                <td>05:00:31</td>
+                <td>1,000,000</td>
+                <td>성공</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-contents">
+        <div class="wrapper">
+          <div class="title">
+            <h1>지역별 발생 현황</h1>
+          </div>
+          <div class="contents">
+            <div class="map">
+              <div class="total-txt">총계:38,338 (+205)</div>
+              <div class="uncover-txt">검역:1,920 (+21)</div>
+              <div class="cnt-txt">1,596 (0)</div>
+              <div class="map-txt">경기</div>
+              <canvas id="my-canvasF" width="auto" height="350px" style="position: absolute; left: 60px; top:0px; z-index: 4;"></canvas>
+              <canvas id="my-canvas" width="auto" height="350px" style="position: absolute; left: 60px; top:0px; z-index: 3;"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="title">
+            <h1>일일업무 소명 등록현황</h1>
+          </div>
+          <div class="contents">
+            <div class="chart-con">
+              <div class="btn-wrap">
+                <!-- select-box -->
+                <div class="select-box size-s">                                
+                  <input type="hidden" name="option-value" value="" id="select-input">
+                  <button class="select-label" type="button">일</button>
+                  <ul class="option" id="select-options2" style="display: none;">
+                      <li class="option-item">일</li>
+                      <li class="option-item">분류1</li>
+                      <li class="option-item">분류2</li>
+                  </ul>                                
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <div id="chart5" style="width: 100%; height: 250px;" class="chart"></div>
+              </div>
+              
+              <div class="txt-wrap">
+                <p>어제 소명 건수</p>
+                <h2>320</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="title">
+            <h1>시스템 리소스 정보</h1>
+          </div>
+          <div class="contents">
+            <div class="resource">
+              <!-- <img src="/images/chart_box_6.png"/> -->
+              <div class="resource-info">
+                <h2>CPU 사용률</h2>
+                <ul>
+                  <li class="cpu">사용중인 CPU 0.8%</li>
+                  <li>사용가능 CPU 99.2%</li>
+                </ul>
+              </div>
+              <div>
+                <canvas id="chart6" width="100%" height="100%"></canvas>
+              </div>
+            </div>
+            <div class="resource">
+              <!-- <img src="/images/chart_box_7.png"/> -->
+              <div class="resource-info">
+                <h2>메모리 사용률</h2>
+                <ul>
+                  <li class="memory">사용중인 메모리 36.3%</li>
+                  <li>사용가능 메모리 63.7%</li>
+                </ul>
+              </div>
+              <div>
+                <canvas id="chart7" width="100%" height="100%"></canvas>
+              </div>
+            </div>
+            <div class="resource">
+              <!-- <img src="/images/chart_box_8.png"/> -->
+              <div class="resource-info">
+                <h2>디스크 사용률</h2>
+                <ul>
+                  <li class="disk">사용중인 디스크 80%</li>
+                  <li>사용가능 디스크 20%</li>
+                </ul>
+              </div>
+              <div>
+                <canvas id="chart8" width="100%" height="100%"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © Korea Institute of Drug Safety & Risk Management. All Rights Reserved.</p>
+    </div>
+  </main>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/chart.js"></script>
+  <script src="../js/map.js"></script>
+  
+</body>
+</html>

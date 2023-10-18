@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마약류오남용실시간분석관리시스템 - 기준관리설정</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+<body>
+  <div class="setting">
+    <header>
+      <h1>기준 관리 설정</h1>
+      <button><img src="../images/close_icon.svg"/></button>
+    </header>
+    <div class="wrapper">
+      <div class="drop-menu">
+        <h1>오남용조치기준 관리</h1>
+        <div class="drop-wrapper">
+          <div class="group-item">
+            <div class="group-header">그룹 1</div>
+            <div class="group-content">
+              <div class="child-group">
+                <div class="child-group-item">
+                  <div class="child-group-header">진통제 (16)</div>
+                  <div class="child-group-content">진통제1</div>
+                  <div class="child-group-content">진통제2</div>
+                  <div class="child-group-content">진통제3</div>
+                </div>
+                <div class="child-group-item">
+                  <div class="child-group-header">식욕억제제 (4)</div>
+                  <div class="child-group-content">식욕억제제1</div>
+                  <div class="child-group-content">식욕억제제2</div>
+                  <div class="child-group-content">식욕억제제3</div>
+                </div>
+                <div class="child-group-item">
+                  <div class="child-group-header">프로포폴 (4)</div>
+                  <div class="child-group-content">프로포폴1</div>
+                  <div class="child-group-content">프로포폴2</div>
+                  <div class="child-group-content">프로포폴3</div>
+                </div>
+                <div class="child-group-item">
+                  <div class="child-group-header">졸피뎀 (3)</div>
+                  <div class="child-group-content">졸피뎀1</div>
+                  <div class="child-group-content">졸피뎀2</div>
+                  <div class="child-group-content">졸피뎀3</div>
+                </div>
+                <div class="child-group-item">
+                  <div class="child-group-header">항불안제 (6)</div>
+                  <div class="child-group-content">항불안제1</div>
+                  <div class="child-group-content">항불안제2</div>
+                  <div class="child-group-content">항불안제3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group-item">
+            <div class="group-header">그룹 2</div>
+            <div class="group-content">
+              <div class="child-group">
+                <div class="child-group-item">
+                  <div class="child-group-header">진통제 (16)</div>
+                  <div class="child-group-content">진통제1</div>
+                  <div class="child-group-content">진통제2</div>
+                  <div class="child-group-content">진통제3</div>
+                </div>
+                <div class="child-group-item">
+                  <div class="child-group-header">식욕억제제 (4)</div>
+                  <div class="child-group-content">식욕억제제1</div>
+                  <div class="child-group-content">식욕억제제2</div>
+                  <div class="child-group-content">식욕억제제3</div>
+                </div>
+                <div class="child-group-item">
+                  <div class="child-group-header">프로포폴 (4)</div>
+                  <div class="child-group-content">프로포폴1</div>
+                  <div class="child-group-content">프로포폴2</div>
+                  <div class="child-group-content">프로포폴3</div>
+                </div>
+                <div class="child-group-item">
+                  <div class="child-group-header">졸피뎀 (3)</div>
+                  <div class="child-group-content">졸피뎀1</div>
+                  <div class="child-group-content">졸피뎀2</div>
+                  <div class="child-group-content">졸피뎀3</div>
+                </div>
+                <div class="child-group-item">
+                  <div class="child-group-header">항불안제 (6)</div>
+                  <div class="child-group-content">항불안제1</div>
+                  <div class="child-group-content">항불안제2</div>
+                  <div class="child-group-content">항불안제3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="contents">
+          <h1>오남용조치기준 등록 / 수정</h1>
+          <div class="option-wrap">
+            <div class="option-group">
+              <p>기준명</p>
+              <input type="text" placeholder="위배기준명" class="text-area">
+            </div>
+            <div class="option-group">
+              <p>적용일</p>
+              <div class="datepicker datepicker-multi">
+                <div>
+                  <div class="date start-date">2023-02-28</div>
+                  <span>~</span>
+                  <div class="date end-date">2023-02-28</div>
+                  <input type="hidden" name="" id="" value="">
+                </div>
+                <img src="../images/cal.svg"/>
+              </div>
+            </div>
+            <div class="option-group">
+              <p>사용여부</p>
+              <div class="select-box size-s">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">Y</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">Y</li>
+                    <li class="option-item">N</li>
+                </ul>                                
+              </div>
+            </div>
+            <div class="option-group">
+              <p>유형</p>
+              <div class="select-box size-l">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">유형</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">유형</li>
+                    <li class="option-item">유형1</li>
+                    <li class="option-item">유형2</li>
+                    <li class="option-item">유형3</li>
+                </ul>                                
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="contents">
+          <h1>대상 설정</h1>
+
+          <div class="tap-wrap">
+            <button type="button" data-tap="tap-1" class="tap-btn tap-top selected">수식</button>
+            <button type="button" data-tap="tap-2" class="tap-btn tap-top">사용자쿼리</button>
+          </div>
+
+          <div id="tap-1" class="tap-content tap-top-content selected">
+            <div class="terms-add">
+              <h1>대상 조건 추가</h1>
+              <div class="option-wrap">
+                <div class="select-wrap">
+                  <div class="select-box size-200">                                
+                    <input type="hidden" name="option-value" value="" id="select-input">
+                    <button class="select-label" type="button">분류</button>
+                    <ul class="option" id="select-options2" style="display: none;">
+                        <li class="option-item">분류</li>
+                        <li class="option-item">분류1</li>
+                        <li class="option-item">분류2</li>
+                        <li class="option-item">분류3</li>
+                    </ul>                                
+                  </div>
+                  <div class="select-box size-200">                                
+                    <input type="hidden" name="option-value" value="" id="select-input">
+                    <button class="select-label" type="button">연산자</button>
+                    <ul class="option" id="select-options2" style="display: none;">
+                        <li class="option-item">연산자</li>
+                        <li class="option-item">연산자1</li>
+                        <li class="option-item">연산자2</li>
+                        <li class="option-item">연산자3</li>
+                    </ul>                                
+                  </div>
+                  <div class="select-box size-200">                                
+                    <input type="hidden" name="option-value" value="" id="select-input">
+                    <button class="select-label" type="button">값</button>
+                    <ul class="option" id="select-options2" style="display: none;">
+                        <li class="option-item">값</li>
+                        <li class="option-item">값1</li>
+                        <li class="option-item">값2</li>
+                        <li class="option-item">값3</li>
+                    </ul>                                
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <button type="button" class="btn btn-s btn-blue">추가</button>
+                  <button type="button" class="btn btn-s btn-sky">초기화</button>
+                </div>
+              </div>
+            </div>
+            <div class="query-box">
+              <div class="check-wrap">
+                <input type="checkbox" id="check-1">
+                <label for="check-1"><span>효능분류 = '진통제'</span></label>
+              </div>
+              <div class="check-wrap">
+                <input type="checkbox" id="check-2">
+                <label for="check-2"><span>성분분류 NOT IN '주사제'</span></label>
+              </div>
+              <div class="check-wrap">
+                <input type="checkbox" id="check-3">
+                <label for="check-3"><span>성분분류 NOT IN '경피흡수제'</span></label>
+              </div>
+            </div>
+            <div class="control-wrap">
+              <div>
+                <button type="button"><img src="../images/up_20.svg"/></button>
+                <button type="button"><img src="../images/down_20.svg"/></button>
+              </div>
+              <div>
+                <button type="button"><img src="../images/copy_icon.svg"/></button>
+                <button type="button"><img src="../images/trash_icon.svg"/></button>
+              </div>
+            </div>
+            <div class="confirm-wrap">
+              <h1>A and (B or C)</h1>
+              <button type="button" class="btn btn-s btn-black">검증</button>
+            </div>
+          </div>
+
+          <div id="tap-2" class="tap-content tap-top-content">
+            <div class="query-box">
+              <p>AND USE_GRP='진통제</p>
+              <p>AND INGR_GRP IN('펜타닐 (주사제이외)')</p>
+              <p>AND FROM_NM IN('펜타닐','서방성경피흡수제')</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contents">
+          <h1>기준 설정</h1>
+          <div class="tap-wrap">
+            <button type="button" data-tap="tap-3" class="tap-btn tap-btm selected">수식</button>
+            <button type="button" data-tap="tap-4" class="tap-btn tap-btm">사용자쿼리</button>
+          </div>
+          <div id="tap-3" class="tap-content tap-btm-content selected">
+            <div class="terms-add">
+              <h1>대상 조건 추가</h1>
+              <div class="option-wrap">
+                <div class="select-wrap">
+                  <div class="select-box size-200">                                
+                    <input type="hidden" name="option-value" value="" id="select-input">
+                    <button class="select-label" type="button">분류</button>
+                    <ul class="option" id="select-options2" style="display: none;">
+                        <li class="option-item">분류</li>
+                        <li class="option-item">분류1</li>
+                        <li class="option-item">분류2</li>
+                        <li class="option-item">분류3</li>
+                    </ul>                                
+                  </div>
+                  <div class="select-box size-200">                                
+                    <input type="hidden" name="option-value" value="" id="select-input">
+                    <button class="select-label" type="button">연산자</button>
+                    <ul class="option" id="select-options2" style="display: none;">
+                        <li class="option-item">연산자</li>
+                        <li class="option-item">연산자1</li>
+                        <li class="option-item">연산자2</li>
+                        <li class="option-item">연산자3</li>
+                    </ul>                                
+                  </div>
+                  <div class="select-box size-200">                                
+                    <input type="hidden" name="option-value" value="" id="select-input">
+                    <button class="select-label" type="button">값</button>
+                    <ul class="option" id="select-options2" style="display: none;">
+                        <li class="option-item">값</li>
+                        <li class="option-item">값1</li>
+                        <li class="option-item">값2</li>
+                        <li class="option-item">값3</li>
+                    </ul>                                
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <button type="button" class="btn btn-s btn-blue">추가</button>
+                  <button type="button" class="btn btn-s btn-sky">초기화</button>
+                </div>
+              </div>
+            </div>
+            <div class="query-box">
+              <div class="check-wrap">
+                <input type="checkbox" id="check-4">
+                <label for="check-4"><span>처방일수 >= 92</span></label>
+              </div>
+              <div class="check-wrap">
+                <input type="checkbox" id="check-5">
+                <label for="check-5"><span>연령 < 18</span></label>
+              </div>
+              <div class="check-wrap">
+                <input type="checkbox" id="check-6">
+                <label for="check-6"><span>질병코드 NOT IN C</span></label>
+              </div>
+            </div>
+            <div class="control-wrap">
+              <div>
+                <button type="button"><img src="../images/up_20.svg"/></button>
+                <button type="button"><img src="../images/down_20.svg"/></button>
+              </div>
+              <div>
+                <button type="button"><img src="../images/copy_icon.svg"/></button>
+                <button type="button"><img src="../images/trash_icon.svg"/></button>
+              </div>
+            </div>
+            <div class="confirm-wrap">
+              <h1>A and (B or C)</h1>
+              <button type="button" class="btn btn-s btn-black">검증</button>
+            </div>
+          </div>
+          <div id="tap-4" class="tap-content tap-btm-content">
+            <div class="query-box">
+              <p>AND (MDC_SUM_QY * STNDRD / MDC_TOT_DCNT) > 10</p>
+              <p>AND MDC_TOT_DCNT <> 0</p>
+              <p>AND PCE_QY >= 0</p>
+              <p>AND PRODUCT_NM NOT LIKE ‘%CR 정 %’</p>
+              <p>AND PAT_GENDER IS NOT NULL</p>
+            </div>
+            <div class="start-btn-wrap">
+              <button type="button" class="btn btn-s btn-black">실행</button>
+            </div>
+            <div class="table-title">
+              <h1>검색 결과<span>314</span></h1>
+              <button type="button" class="btn btn-excel"><img src="../images/excel_icon.svg"/>다운로드</button>
+            </div>
+            <table>
+              <tr>
+                <th>번호</th>
+                <th>효능</th>
+                <th>성분</th>
+                <th>처방기관</th>
+                <th>처방기관 주소</th>
+                <th>처방의사</th>
+                <th>환자</th>
+                <th>성별</th>
+                <th>나이</th>
+                <th>처방건</th>
+                <th>처방량</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td> 
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>효능 효능</td>
+                <td>성분 성분 성분</td>
+                <td>처방기관 기관</td>
+                <td>경기도 안양시 만안구 엘에스로</td>
+                <td>홍길동</td>
+                <td>홍길동씨</td>
+                <td>남</td>
+                <td>30</td>
+                <td>처방건1</td>
+                <td class="td-red">5</td>
+              </tr>
+            </table>
+            <div class='pagination'>
+              <button class='prev-btn'><img src="../images/prev_icon.svg"/></button>
+              <button class='page selected'>1</button>
+              <button class='page'>2</button>
+              <button class='page'>3</button>
+              <button class='next-btn'><img src="../images/next_icon.svg"/></button>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+        </div>
+        <div class="save-btn">
+          <button type="button" class="btn btn-l btn-whith">취소</button>
+          <button type="button" class="btn btn-l btn-blue">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/main.js"></script>
+  <!-- datepicker -->
+  <script type="text/javascript" src="../lib/timepicker.js"></script>
+  <script type="text/javascript" src="../lib/moment.min.js"></script>
+  <script type="text/javascript" src="../lib/datepicker.js"></script>
+  <script type="text/javascript" src="../lib/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/datepicker.css" />
+
+  <script>
+    // tap menu
+    $('.tap-top').click(function() {
+      var tap_id = $(this).attr('data-tap');
+
+      $('.tap-top').removeClass('selected');
+      $('.tap-top-content').removeClass('selected');
+
+      $(this).addClass('selected');
+      $("#"+tap_id).addClass('selected');
+    })
+
+    $('.tap-btm').click(function() {
+      var tap_id = $(this).attr('data-tap');
+
+      $('.tap-btm').removeClass('selected');
+      $('.tap-btm-content').removeClass('selected');
+
+      $(this).addClass('selected');
+      $("#"+tap_id).addClass('selected');
+    })
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마약류오남용실시간분석관리시스템 - 사전알리미 상세정보/수정</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+<body>
+  <div class="notify-popup">
+    <header>
+      <h1>사전알리미 상세정보/수정</h1>
+      <button><img src="../images/close_icon.svg"/></button>
+    </header>
+    <div class="wrapper">
+      <div class="tap-wrapper">
+        <button type="button" data-tap="tap-1" class="tap-btn selected">사전알리미정보</button>
+        <button type="button" data-tap="tap-2" class="tap-btn">오남용조치기준</button>
+        <button type="button" data-tap="tap-3" class="tap-btn">실행주기</button>
+      </div>
+      <!-- tap 1 -->
+      <div id="tap-1" class="tap-content selected">
+        <div class="input-group">
+          <label>
+            <input type="radio" name="contact1" checked />
+            <span>일회성</span>
+          </label>
+          <label>
+            <input type="radio" name="contact1"/>
+            <span>정기업무용</span>
+          </label>
+        </div>
+        <div class="select-group">
+          <div class="select-wrap">
+            <div class="contents">
+              <p>사전알리미 명칭</p>
+              <input type="text" placeholder="사전알리미 명칭" class="text-area">
+            </div>
+            <div class="contents">
+              <p>효능</p>
+              <div class="select-box size-l size-h-48">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">효능</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">효능</li>
+                    <li class="option-item">효능1</li>
+                    <li class="option-item">효능2</li>
+                </ul>                                
+              </div>
+            </div>
+            <div class="contents">
+              <p>시작취급일</p>
+              <div class="datepicker datepicker-single">
+                <div>
+                  <div class="date start-date">2023-02-28</div>
+                  <input type="hidden" name="" id="" value="">
+                </div>
+                <img src="../images/cal.svg"/>
+              </div>
+            </div>
+            <div class="contents">
+              <p>년도</p>
+              <div class="select-box size-l size-h-48">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">년도</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">년도</li>
+                    <li class="option-item">년도1</li>
+                    <li class="option-item">년도2</li>
+                </ul>                                
+              </div>
+            </div>
+            <div class="contents">
+              <p>차수설명</p>
+              <input type="text" placeholder="차수설명" class="text-area">
+            </div>
+            <div class="contents">
+              <p>직전 사전알리미</p>
+              <div class="select-box size-l size-h-48">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">직전 사전알리미</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">직전 사전알리미</li>
+                    <li class="option-item">직전 사전알리미1</li>
+                    <li class="option-item">직전 사전알리미2</li>
+                </ul>                                
+              </div>
+            </div>
+          </div>
+          <div class="select-wrap">
+            <div class="contents">
+              <p>약물</p>
+              <div class="select-box size-l size-h-48">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">약물</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">약물</li>
+                    <li class="option-item">약물1</li>
+                    <li class="option-item">약물2</li>
+                </ul>                                
+              </div>
+            </div>
+            <div class="contents">
+              <p>성분</p>
+              <div class="select-box size-l size-h-48">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">성분</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">성분</li>
+                    <li class="option-item">성분1</li>
+                    <li class="option-item">성분2</li>
+                  </ul>                                
+              </div>
+            </div>
+            <div class="contents">
+              <p>종료취급일</p>
+              <div class="datepicker datepicker-single">
+                <div>
+                  <div class="date start-date">2023-02-28</div>
+                  <input type="hidden" name="" id="" value="">
+                </div>
+                <img src="../images/cal.svg"/>
+              </div>
+            </div>
+            <div class="contents">
+              <p>차수</p>
+              <div class="select-box size-l size-h-48">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">차수</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">차수</li>
+                    <li class="option-item">차수1</li>
+                    <li class="option-item">차수2</li>
+                </ul>                                
+              </div>
+            </div>
+            <div class="contents">
+              <p>사용여부</p>
+              <div class="select-box size-l size-h-48">                                
+                <input type="hidden" name="option-value" value="" id="select-input">
+                <button class="select-label" type="button">사용여부</button>
+                <ul class="option" id="select-options2" style="display: none;">
+                    <li class="option-item">사용여부</li>
+                    <li class="option-item">Y</li>
+                    <li class="option-item">N</li>
+                </ul>                                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="save-btn-wrapper">
+          <button type="button" class="btn btn-m btn-whith">닫기</button>
+          <button type="button" class="btn btn-m btn-black">삭제</button>
+          <button type="button" class="btn btn-m btn-blue">저장</button>
+        </div>
+      </div>
+
+      <!-- tap2 -->
+      <div id="tap-2" class="tap-content">
+        <div class="tap-2-wrapper">
+          <div class="sub-tap-wrapper">
+            <h2>오남용조치기준 관리</h2>
+            <h3>그룹 1</h3>
+            <button data-sub-tap="sub-tap-1" class="sub-tap-btn selected">진통제 (7)</button>
+            <button data-sub-tap="sub-tap-2" class="sub-tap-btn">식욕억제제 (4)</button>
+            <button data-sub-tap="sub-tap-3" class="sub-tap-btn">프로포폴 (4)</button>
+            <button data-sub-tap="sub-tap-4" class="sub-tap-btn">졸피뎀 (3)</button>
+            <button data-sub-tap="sub-tap-5" class="sub-tap-btn">항불안제 (6)</button>
+          </div>
+          <div style="width: calc(100% - 180px);">
+            <table id="sub-tap-1" class="selected">
+              <tr>
+                <th style="width: 30%;">기준명</th>
+                <th style="width: 40%;">적용일</th>
+                <th style="width: 30%;">사용여부</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-1-1">
+                    <label for="check-1-1"><span>진통제 1</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-1-2">
+                    <label for="check-1-2"><span>진통제 2</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-1-3">
+                    <label for="check-1-3"><span>진통제 3</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-1-4">
+                    <label for="check-1-4"><span>진통제 4</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-1-5">
+                    <label for="check-1-5"><span>진통제 5</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-1-6">
+                    <label for="check-1-6"><span>진통제 6</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-1-7">
+                    <label for="check-1-7"><span>진통제 7</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+            </table>
+            <table id="sub-tap-2" class="">
+              <tr>
+                <th style="width: 30%;">기준명</th>
+                <th style="width: 40%;">적용일</th>
+                <th style="width: 30%;">사용여부</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-2-1">
+                    <label for="check-2-1"><span>식욕억제제 1</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-2-2">
+                    <label for="check-2-2"><span>식욕억제제 2</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-2-3">
+                    <label for="check-2-3"><span>식욕억제제 3</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-2-4">
+                    <label for="check-2-4"><span>식욕억제제 4</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+            </table>
+            <table id="sub-tap-3" class="">
+              <tr>
+                <th style="width: 30%;">기준명</th>
+                <th style="width: 40%;">적용일</th>
+                <th style="width: 30%;">사용여부</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-3-1">
+                    <label for="check-3-1"><span>프로포폴 1</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-3-2">
+                    <label for="check-3-2"><span>프로포폴 2</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-3-3">
+                    <label for="check-3-3"><span>프로포폴 3</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-3-4">
+                    <label for="check-3-4"><span>프로포폴 4</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+            </table>
+            <table id="sub-tap-4" class="">
+              <tr>
+                <th style="width: 30%;">기준명</th>
+                <th style="width: 40%;">적용일</th>
+                <th style="width: 30%;">사용여부</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-4-1">
+                    <label for="check-4-1"><span>졸피뎀 1</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-4-2">
+                    <label for="check-4-2"><span>졸피뎀 2</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-4-3">
+                    <label for="check-4-3"><span>졸피뎀 3</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+            </table>
+            <table id="sub-tap-5" class="">
+              <tr>
+                <th style="width: 30%;">기준명</th>
+                <th style="width: 40%;">적용일</th>
+                <th style="width: 30%;">사용여부</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-5-1">
+                    <label for="check-5-1"><span>항불안제 1</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-5-2">
+                    <label for="check-5-2"><span>항불안제 2</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-5-3">
+                    <label for="check-5-3"><span>항불안제 3</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-5-4">
+                    <label for="check-5-4"><span>항불안제 4</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-5-5">
+                    <label for="check-5-5"><span>항불안제 5</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="check-wrap">
+                    <input type="checkbox" id="check-5-6">
+                    <label for="check-5-6"><span>항불안제 6</span></label>
+                  </div>
+                </td>
+                <td>2023-07-01~9999-12-31</td>
+                <td>Y</td>
+              </tr>
+            </table>
+            <div class="checked-wrapper">
+              <div class="checked-data">
+                <p>진통제 위배기준1</p><button class="btn">제외</button>
+              </div>
+              <div class="checked-data">
+                <p>졸피뎀 위배기준1</p><button class="btn">제외</button>
+              </div>
+              <div class="checked-data">
+                <p>항불안제 위배기준1</p><button class="btn">제외</button>
+              </div>
+            </div>
+            <div class="save-btn-wrapper">
+              <button type="button" class="btn btn-m btn-whith">닫기</button>
+              <button type="button" class="btn btn-m btn-black">삭제</button>
+              <button type="button" class="btn btn-m btn-blue">저장</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tap3 -->
+      <div id="tap-3" class="tap-content">
+        <div class="input-group">
+          <label>
+            <input type="radio" name="contact2" checked />
+            <span>일회성</span>
+          </label>
+          <label>
+            <input type="radio" name="contact2"/>
+            <span>정기업무용</span>
+          </label>
+        </div>
+        <div class="select-group">
+          <div class="select-wrap">
+            <div class="contents">
+              <p>실행일자</p>
+              <div class="datepicker datepicker-single">
+                <div>
+                  <div class="date start-date">2023-02-28</div>
+                  <input type="hidden" name="" id="" value="">
+                </div>
+                <img src="../images/cal.svg"/>
+              </div>
+            </div>
+          </div>
+          <div class="select-wrap">
+            <div class="contents time-select-box">
+              <p>실행시간</p>
+              <div class="time-selt" >01 : 00 AM
+                <input type="hidden" class="pick-time" value=""  disabled>
+                <img src="../images/timer_icon.svg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="save-btn-wrapper">
+          <button type="button" class="btn btn-m btn-whith">닫기</button>
+          <button type="button" class="btn btn-m btn-black">삭제</button>
+          <button type="button" class="btn btn-m btn-blue">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/main.js"></script>
+  <!-- datepicker -->
+  <script type="text/javascript" src="../lib/timepicker.js"></script>
+  <script type="text/javascript" src="../lib/moment.min.js"></script>
+  <script type="text/javascript" src="../lib/datepicker.js"></script>
+  <script type="text/javascript" src="../lib/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/datepicker.css" />
+  
+  <script>
+    $('.tap-btn').click(function() {
+      var tap_id = $(this).attr('data-tap');
+
+      $('.tap-btn').removeClass('selected');
+      $('.tap-content').removeClass('selected');
+
+      $(this).addClass('selected');
+      $("#"+tap_id).addClass('selected');
+    })
+
+    $('.sub-tap-btn').click(function() {
+      var sub_tap_id = $(this).attr('data-sub-tap');
+
+      $('.sub-tap-btn').removeClass('selected');
+      $('table').removeClass('selected');
+
+      $(this).addClass('selected');
+      $("#"+sub_tap_id).addClass('selected');
+    })
+  </script>
+
+</body>
+</html>
